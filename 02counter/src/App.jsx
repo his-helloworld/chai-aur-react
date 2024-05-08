@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   let [counter, setCounter] = useState(5);
-  let [rmCounter, setrmCounter] = useState(5);
+  
   // let counter = 5;
   const addValue = () => {
     if(counter >= 20) {
@@ -13,14 +13,17 @@ function App() {
     }
     // counter = counter + 1;
     setCounter(counter + 1);
+    setCounter(counter + 1);
+    setCounter(counter + 1);
+    setCounter(counter + 1);
   }
 
   const removeValue = () => {
-    if (rmCounter === 0) {
+    if (counter === 0) {
       return;
     }
     // counter = counter - 1;
-    setrmCounter(rmCounter - 1);
+    setCounter(counter - 1);
   }
 
   const handleClick = () => {
@@ -34,7 +37,7 @@ function App() {
       <button
       onClick={addValue}>Add value {counter}</button>
       <br />
-      <button onClick={removeValue}>remove value {rmCounter}</button>
+      <button onClick={removeValue}>remove value {counter}</button>
       <br />
       <button onClick={handleClick}>Refresh Page</button>
     </>
